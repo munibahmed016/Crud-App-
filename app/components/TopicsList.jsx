@@ -12,7 +12,7 @@ const TopicsList = () => {
             </div>
             <div className=' flex gap-2'>
                 <RemoveBtn/>
-                <Link href={"/editTopics/123"}>
+                <Link href={'/editTopic/123'}>
                   <HiPencilAlt size={26}/>
                 </Link>
             </div>
