@@ -1,15 +1,21 @@
-import mongoose, {Schema} from "mongoose";
+import mongoose, { Schema, model, models } from "mongoose";
 
-const Schema = new Schema(
+const topicSchema = new Schema(
     {
-        title: String,
-        description: String,
+        title: {
+            type: String,
+            required: true,
+        },
+        description: {
+            type: String,
+            required: true,
+        },
     },
     {
         timestamps: true,
     }
 );
 
-const Topic = mongoose.models.topic || mongoose.models("Topics", topicSchema);
+const Topic = mongoose.models.topic || mongoose.model("Topic", topicSchema);
 
-export default topic();
+export default Topic;
